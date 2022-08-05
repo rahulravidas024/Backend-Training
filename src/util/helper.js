@@ -11,7 +11,7 @@ module.exports.getPrintDate = printDate
 
 let printMonth = function(){
     const m = calender.getMonth()
-    console.log('Month:', m)
+    console.log('Month:', m + 1)
 }
 module.exports.getPrintMonth = printMonth
 

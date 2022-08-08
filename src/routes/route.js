@@ -5,8 +5,6 @@ const router = express.Router();
 router.get('/test-me', function (req, res) {
     console.log('My batch is', abc.name)
     abc.printName()
-    logger.welcome()
-
     res.send('My second ever api!')
 });
 

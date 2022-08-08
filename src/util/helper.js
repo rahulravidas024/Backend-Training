@@ -1,21 +1,22 @@
-const printDate = function() {
-    let currentDate = new Date()
-    currentDate = currentDate.getDate()
-    console.log('The current date is: '+currentDate)
+
+const calender = new Date()
+const batch = 'Plutonium'
+const weak = 3
+const day = 5
+
+let printDate = function(){
+    const d = calender.getDate()
+    console.log('Date:', d)
 }
+module.exports.getPrintDate = printDate
 
-const printMonth = function() {
-    let currentDate = new Date()
-    let currentMonth = currentDate.getMonth()
-    currentMonth = currentMonth + 1
-
-    console.log('The current months is: ' + currentMonth)
+let printMonth = function(){
+    const m = calender.getMonth()
+    console.log('Month:', m + 1)
 }
+module.exports.getPrintMonth = printMonth
 
-const getBatchInfo = function() {
-    console.log('Plutonium, W4D1, the topic for today is Nodejs')
+let getBatchInfo = function(){
+    console.log(batch,'Weak',weak,'Day',day,'the topic for today is NodeJs module system.')
 }
-
-module.exports.getTodaysDate = printDate
-module.exports.getCurrentMonth = printMonth
-module.exports.printBatchDetails = getBatchInfo
+module.exports.printBatchInfo = getBatchInfo

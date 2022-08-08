@@ -1,21 +1,21 @@
-const trim = function(){
-    let name = "   Sabiha Khan     "
-    name = name.trim()
-    console.log(name)
-}
+const text = '      TODAY Is friday     '
 
-const changeToUpperCase = function() {
-    let upperCaseString = "SaBIHa KHAn"
-    upperCaseString = upperCaseString.toUpperCase()
-    console.log(upperCaseString)
+let trim = function(){
+    let trimText = text.trim()
+    console.log('Text:', text) 
+    console.log('___________________________________________')
+    console.log('Trim text is:', trimText)
 }
+module.exports.getTrim = trim
 
-const changetoLowerCase = function() {
-    let lowerCaseString = "SaBIHa KHAn"
-    lowerCaseString = lowerCaseString.toLowerCase()
-    console.log(lowerCaseString)
+let changeToLowerCase = function(){
+    let lowerText = text.toLowerCase()
+    console.log('Lowercase text is:', lowerText)
 }
+module.exports.getLowerCase = changeToLowerCase
 
-module.exports.trimMyString = trim
-module.exports.getUpperCaseString = changeToUpperCase
-module.exports.changetoLowerCase = changetoLowerCase
+let changeToUpperCase = function(){
+    let upperText = text.toUpperCase()
+    console.log('Uppercase text is:', upperText)
+}
+module.exports.getUpperCase = changeToUpperCase

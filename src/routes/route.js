@@ -5,15 +5,15 @@ const router = express.Router();
 router.get('/movies', function (req, res) {
     let movieList = ["Dhamaal", "All the best", "Chup chup ke", "Golmaal", "Hera Pheri"]
     console.log(movieList)
-    res.send("Successfully Print the All Movies Name on Console")
+    res.send(movieList)
 })
 
 router.get('/movies/:indexNumber', function (req, res) {
     let movieList = ['Rang de basanti', 'The shining', 'Lord of the rings', 'Batman begins']
     let movieIndex = req.params.indexNumber
-    if (movieIndex < movieList.length) {
+    if (movieIndex < movieList.length && movieIndex>=0) {
         console.log([movieList[movieIndex]])
-        res.send("Successfully Print the Movie Name on Console")
+        res.send([movieList[movieIndex]])
     }
     else {
         console.log("Please use a valid Index Number")
@@ -39,7 +39,7 @@ router.get('/films', function (req, res) {
         "name": "Finding Nemo"
     }]
     console.log(filmObject)
-    res.send("Successfully Print the All Films Name on Console")
+    res.send(filmObject)
 })
 
 
@@ -61,16 +61,15 @@ router.get('/films/:filmId', function(req, res){
         "name": "Finding Nemo"
     }] 
 
-    let filmId = req.params.filmId
-    if(filmId<filmObject.length)
+    for(let i=0; i<filmObject.length; i++)
     {
-        console.log(filmObject[filmId])
-        res.send("Successfully Print the Films Name on Console")
+        let filmId = req.params.filmId
+        if(filmObject[i].id ==filmId)
+        {
+            return res.send(filmObject[i])
+        }
     }
-    else{
-        console.log("No movie exists with this id")
-        res.send("No movie exists with this id")
-    }
+    res.send("No movie exists with this id")
 })
 
 

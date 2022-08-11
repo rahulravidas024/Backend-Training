@@ -159,3 +159,11 @@ router.get("/films/:filmId", function(req, res){
 
 module.exports = router;
 // adding this comment for no reason
+
+router.get('/query-2', function(req, res){
+    arr = [2,5,7,8,9,11,55,88,11,44,55]
+    let input = req.query.input
+    let result = arr.filter(x => x > input)
+    console.log(result) 
+    res.send({data: result})
+})

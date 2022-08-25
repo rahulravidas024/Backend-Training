@@ -25,7 +25,7 @@ const mid1= function ( req, res, next) {
     console.log ("inside GLOBAL MW");
     console.log("Hi I am a middleware named Mid1")
     // logic
-    let loggedIn = false
+    let loggedIn = true
 
     if (loggedIn== true) { 
         console.log( "OK LOGGED IS IS TRUE NOW")

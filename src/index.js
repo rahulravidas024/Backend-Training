@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const route = require('./routes/route.js');
 const { default: mongoose } = require('mongoose');
 const app = express();
+const moment = require('moment')
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -20,6 +21,14 @@ mongoose.connect("mongodb+srv://functionup-cohort:G0Loxqc9wFEGyEeJ@cluster0.rzot
 //         next();
 //   }
 //   );
+
+app.use(function (req, res, next){
+    console.log("This message will print everytime when you hit the API")
+
+    console.log(moment().format("YYYY-MM-DD HH:mm:ss") + " , " + req.ip + " , " + req.path)
+    console.log()
+    next()
+})
   
 
 app.use('/', route);

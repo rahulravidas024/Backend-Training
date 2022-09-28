@@ -1,0 +1,25 @@
+{
+  "name": "backend-training",
+  "version": "1.0.0",
+  "description": "step1: postman/frontend sends a file to our node server in an API call step2: Multer is able to grab that file and make it available to node server step3: uploading this file to AWS S3",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rahulravidas024/Backend-Training.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rahulravidas024/Backend-Training/issues"
+  },
+  "homepage": "https://github.com/rahulravidas024/Backend-Training#readme",
+  "dependencies": {
+    "aws-sdk": "^2.1225.0",
+    "express": "^4.18.1",
+    "init": "^0.1.2",
+    "multer": "^1.4.5-lts.1"
+  }
+}
